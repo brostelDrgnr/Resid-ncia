@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Mapa para Aprovação: Fase 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+        }
+        .poster-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        /* Custom checkbox style */
+        .chk {
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #cbd5e1; /* slate-300 */
+            border-radius: 0.25rem;
+            flex-shrink: 0;
+        }
+        .arrow-path {
+            stroke-width: 3px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            marker-end: url(#arrowhead);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <div class="poster-container p-4 sm:p-8">
+        <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-10">
+
+            <!-- Título Principal -->
+            <header class="text-center mb-8">
+                <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+                    <span role="img" aria-label="foguete">🚀</span> SEU MAPA PARA APROVAÇÃO: FASE 1
+                </h1>
+                <p class="text-slate-600 font-bold text-lg mt-1">(Outubro - Dezembro 2025)</p>
+                <p class="mt-4 text-base sm:text-lg font-semibold bg-indigo-100 text-indigo-800 rounded-lg py-2 px-4 inline-block">
+                    <strong>MISSÃO:</strong> Sair dos 48% para 65% de acertos, dominando a base para Radiologia.
+                </p>
+            </header>
+
+            <!-- Seção 1: As Novas Regras do Jogo -->
+            <section class="bg-amber-50 border-2 border-amber-200 rounded-xl p-6 mb-10">
+                <h2 class="text-2xl font-bold text-amber-900 mb-4 text-center sm:text-left"><span role="img" aria-label="alvo">🎯</span> AS NOVAS REGRAS DO JOGO</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white/60 p-4 rounded-lg">
+                        <p class="font-bold text-slate-700">META DIÁRIA (Seg/Sex)</p>
+                        <p class="text-slate-600">1.5 a 2h de estudo de <em>conteúdo novo</em> com Método Híbrido.</p>
+                    </div>
+                    <div class="bg-white/60 p-4 rounded-lg">
+                        <p class="font-bold text-slate-700">REVISÃO SEMANAL (Sab/Dom - 1h)</p>
+                        <p class="text-slate-600">Refazer 10-15 questões-chave + Anotações do "Caderno de Erros".</p>
+                    </div>
+                    <div class="bg-white/60 p-4 rounded-lg">
+                        <p class="font-bold text-slate-700">REVISÃO ACUMULADA (Fim de Módulo)</p>
+                        <p class="text-slate-600">Bloco de questões mistas de <em>todo o conteúdo já visto.</em></p>
+                    </div>
+                     <div class="bg-amber-200 text-amber-900 p-4 rounded-lg flex items-center justify-center">
+                        <p class="font-extrabold text-center text-lg">MANTRA: <em>Consistência vence a intensidade.</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 2: Checklist da Aprovação -->
+            <section>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center mb-8"><span role="img" aria-label="checklist">✅</span> CHECKLIST DA APROVAÇÃO COM REVISÃO INTEGRADA</h2>
+                
+                <div id="timeline-container" class="relative">
+                    <!-- SVG para desenhar as setas de revisão -->
+                    <svg id="arrow-svg" class="absolute top-0 left-0 w-full h-full pointer-events-none z-10">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" />
+                            </marker>
+                        </defs>
+                    </svg>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+                        <!-- COLUNA 1: OUTUBRO -->
+                        <div class="flex flex-col gap-6">
+                            <h3 class="text-2xl font-black text-center text-sky-600 bg-sky-100 rounded-lg py-2">OUTUBRO</h3>
+                            
+                            <!-- Bloco: Clínica Médica -->
+                            <div id="bloco-clinica" class="bg-sky-50 border border-sky-200 rounded-xl p-5 flex flex-col gap-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-3xl">🫀🫁</div> <!-- Coração + Pulmão -->
+                                    <h4 class="text-xl font-bold text-sky-800">CLÍNICA MÉDICA <br><span class="text-sm font-semibold text-sky-600">(O Alicerce)</span></h4>
+                                </div>
+                                
+                                <div class="space-y-3">
+                                    <p class="font-bold">Semana 1 (20-26/Out):</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">CONTEÚDO NOVO:</span> HAS & IAM</span></label>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">REVISÃO SEMANAL:</span> HAS & IAM</span></label>
+                                </div>
+                                <hr>
+                                <div class="space-y-3">
+                                    <p class="font-bold">Semana 2 (27/Out-02/Nov):</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">CONTEÚDO NOVO:</span> ICC & Asma/DPOC</span></label>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">REVISÃO SEMANAL:</span> ICC & Asma/DPOC</span></label>
+                                </div>
+                                
+                                <div class="bg-sky-200 text-sky-900 rounded-lg p-4 mt-4">
+                                    <p class="font-extrabold text-center">Checkpoint de Fim de Módulo</p>
+                                    <p class="text-xs text-center font-semibold mb-2">(Início de Nov)</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk bg-white"></div><span><span class="font-semibold">REVISÃO ACUMULADA (1.5h):</span> 25 questões mistas de <em>TODA Clínica Médica</em>.</span></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- COLUNA 2: NOVEMBRO -->
+                        <div class="flex flex-col gap-6">
+                            <h3 class="text-2xl font-black text-center text-emerald-600 bg-emerald-100 rounded-lg py-2">NOVEMBRO</h3>
+
+                            <!-- Bloco: Cirurgia Geral -->
+                            <div id="bloco-cirurgia" class="bg-emerald-50 border border-emerald-200 rounded-xl p-5 flex flex-col gap-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-3xl">🔪</div> <!-- Bisturi -->
+                                    <h4 class="text-xl font-bold text-emerald-800">CIRURGIA GERAL <br><span class="text-sm font-semibold text-emerald-600">(As Emergências)</span></h4>
+                                </div>
+                                <div class="space-y-3">
+                                    <p class="font-bold">Semana 3 (03-09/Nov):</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">CONTEÚDO NOVO:</span> ATLS & Apendicite/Colecistite</span></label>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">REVISÃO SEMANAL:</span> Temas da semana</span></label>
+                                </div>
+                                <hr>
+                                <div class="space-y-3">
+                                    <p class="font-bold">Semana 4 (10-16/Nov):</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">CONTEÚDO NOVO:</span> Pancreatite & Abdome Agudo Obstrutivo</span></label>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">REVISÃO SEMANAL:</span> Temas da semana</span></label>
+                                </div>
+                                <div id="rev-cirurgia" class="bg-emerald-200 text-emerald-900 rounded-lg p-4 mt-4">
+                                    <p class="font-extrabold text-center">Checkpoint de Fim de Módulo</p>
+                                    <p class="text-xs text-center font-semibold mb-2">(Meio de Nov)</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk bg-white"></div><span><span class="font-semibold">REVISÃO ACUMULADA (1.5h):</span> 25 questões mistas de <em>Clínica Médica + Cirurgia</em>.</span></label>
+                                </div>
+                            </div>
+
+                            <!-- Bloco: G.O. -->
+                            <div id="bloco-go" class="bg-rose-50 border border-rose-200 rounded-xl p-5 flex flex-col gap-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-3xl">🤰</div> <!-- Mulher grávida -->
+                                    <h4 class="text-xl font-bold text-rose-800">GINECO-OBSTETRÍCIA <br><span class="text-sm font-semibold text-rose-600">(O Ciclo da Vida)</span></h4>
+                                </div>
+                                <div class="space-y-3">
+                                    <p class="font-bold">Semana 5 (17-23/Nov):</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">CONTEÚDO NOVO:</span> Pré-Natal & Síndromes Hipertensivas</span></label>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">REVISÃO SEMANAL:</span> Temas da semana</span></label>
+                                </div>
+                                <hr>
+                                <div class="space-y-3">
+                                    <p class="font-bold">Semana 6 (24-30/Nov):</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">CONTEÚDO NOVO:</span> Rastreamento Ginecológico & Anticoncepção</span></label>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">REVISÃO SEMANAL:</span> Temas da semana</span></label>
+                                </div>
+                                <div id="rev-go" class="bg-rose-200 text-rose-900 rounded-lg p-4 mt-4">
+                                    <p class="font-extrabold text-center">Checkpoint de Fim de Módulo</p>
+                                    <p class="text-xs text-center font-semibold mb-2">(Início de Dez)</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk bg-white"></div><span><span class="font-semibold">REVISÃO ACUMULADA (2h):</span> 30-40 questões de <em>Clínica + Cirurgia + G.O.</em></span></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- COLUNA 3: DEZEMBRO -->
+                        <div class="flex flex-col gap-6">
+                            <h3 class="text-2xl font-black text-center text-violet-600 bg-violet-100 rounded-lg py-2">DEZEMBRO</h3>
+                            
+                             <!-- Bloco: Pediatria -->
+                            <div id="bloco-pedia" class="bg-violet-50 border border-violet-200 rounded-xl p-5 flex flex-col gap-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-3xl">👶🩺</div> <!-- Bebê + Estetoscópio -->
+                                    <h4 class="text-xl font-bold text-violet-800">PEDIATRIA <br><span class="text-sm font-semibold text-violet-600">(O Básico que Aprova)</span></h4>
+                                </div>
+                                <div class="space-y-3">
+                                    <p class="font-bold">Semana 7 (01-07/Dez):</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">CONTEÚDO NOVO:</span> Calendário Vacinal, Reanimação Neo & Icterícia</span></label>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">REVISÃO SEMANAL:</span> Temas da semana</span></label>
+                                </div>
+                                <hr>
+                                <div class="space-y-3">
+                                    <p class="font-bold">Semana 8 (08-14/Dez):</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">CONTEÚDO NOVO:</span> GECA/Desidratação & Crise Asmática Infantil</span></label>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">REVISÃO SEMANAL:</span> Temas da semana</span></label>
+                                </div>
+                                <div id="rev-pedia" class="bg-violet-200 text-violet-900 rounded-lg p-4 mt-4">
+                                    <p class="font-extrabold text-center">Checkpoint de Fim de Módulo</p>
+                                    <p class="text-xs text-center font-semibold mb-2">(Meio de Dez)</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk bg-white"></div><span><span class="font-semibold">REVISÃO ACUMULADA (2h):</span> 30-40 questões de <em>TODAS as 4 áreas</em>.</span></label>
+                                </div>
+                            </div>
+                            
+                            <!-- Bloco: Preventiva -->
+                             <div class="bg-slate-100 border border-slate-300 rounded-xl p-5 flex flex-col gap-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-3xl">📊🏥</div> <!-- Gráfico + SUS -->
+                                    <h4 class="text-xl font-bold text-slate-800">PREVENTIVA & NIVELAMENTO <br><span class="text-sm font-semibold text-slate-600">(Finalização)</span></h4>
+                                </div>
+                                <div class="space-y-3">
+                                    <p class="font-bold">Semana 9 (15-21/Dez):</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">CONTEÚDO NOVO:</span> Leis do SUS & Tipos de Estudos</span></label>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">REVISÃO SEMANAL:</span> Temas da semana</span></label>
+                                     <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span><span class="font-semibold">NIVELAMENTO:</span> Revisar seu ponto mais fraco.</span></label>
+                                </div>
+                                <hr>
+                                <div class="space-y-3">
+                                    <p class="font-bold">Semana 10 (22-31/Dez):</p>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span class="font-semibold">SIMULADO FINAL FASE 1 (50 questões)</span></label>
+                                    <label class="flex items-start gap-3 cursor-pointer"><div class="chk"></div><span class="font-semibold">REVISÃO GERAL PÓS-SIMULADO</span></label>
+                                    <div class="flex items-center justify-center gap-3 bg-teal-100 text-teal-800 rounded-lg p-3 mt-2">
+                                        <span class="text-2xl">🏖️</span>
+                                        <span class="font-extrabold text-lg">DESCANSAR!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lógica para desenhar setas de revisão
+            const drawArrow = (fromId, toId, color, curve = 0.5) => {
+                const fromEl = document.getElementById(fromId);
+                const toEl = document.getElementById(toId);
+                const container = document.getElementById('timeline-container');
+                const svg = document.getElementById('arrow-svg');
+
+                if (!fromEl || !toEl || !container || !svg) return;
+
+                const containerRect = container.getBoundingClientRect();
+                const fromRect = fromEl.getBoundingClientRect();
+                const toRect = toEl.getBoundingClientRect();
+
+                // Ponto de partida (meio esquerdo do bloco 'de')
+                const startX = fromRect.left - containerRect.left + 5;
+                const startY = fromRect.top - containerRect.top + fromRect.height / 2;
+                
+                // Ponto de chegada (meio direito do bloco 'para')
+                const endX = toRect.right - containerRect.left - 5;
+                const endY = toRect.top - containerRect.top + toRect.height / 2;
+                
+                const midX = (startX + endX) / 2;
+                const midY = (startY + endY) / 2;
+
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                
+                // Define a curva da seta
+                // 'M' = Mover para, 'Q' = Curva quadrática, 'T' = Curva quadrática suave
+                // Control point for the curve
+                const controlX = midX - (startY - endY) * curve;
+                const controlY = midY + (startX - endX) * curve;
+
+                path.setAttribute('d', `M ${startX} ${startY} Q ${controlX} ${controlY} ${endX} ${endY}`);
+                path.setAttribute('class', 'arrow-path');
+                path.style.stroke = color;
+                svg.querySelector('defs marker polygon').style.fill = color;
+                path.setAttribute('marker-end', 'url(#arrowhead)');
+                
+                svg.appendChild(path);
+            };
+            
+            // Desenha as setas quando a janela é redimensionada
+            const drawAllArrows = () => {
+                // Limpa setas existentes
+                const svg = document.getElementById('arrow-svg');
+                svg.innerHTML = '<defs>' + svg.querySelector('defs').innerHTML + '</defs>'; // Mantém as definições
+
+                // Verifica se a visualização é de desktop antes de desenhar
+                if (window.innerWidth >= 1024) { // 'lg' breakpoint em Tailwind
+                    drawArrow('rev-cirurgia', 'bloco-clinica', '#059669'); // Emerald
+                    drawArrow('rev-go', 'bloco-cirurgia', '#E11D48'); // Rose
+                    drawArrow('rev-go', 'bloco-clinica', '#E11D48'); // Rose
+                    drawArrow('rev-pedia', 'bloco-go', '#8B5CF6'); // Violet
+                    drawArrow('rev-pedia', 'bloco-cirurgia', '#8B5CF6'); // Violet
+                }
+            };
+            
+            // Adiciona funcionalidade de checklist
+            document.querySelectorAll('.chk').forEach(chk => {
+                chk.parentElement.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    chk.classList.toggle('bg-green-400');
+                    chk.classList.toggle('border-green-600');
+                });
+            });
+
+            // Desenha as setas inicialmente e em caso de redimensionamento
+            drawAllArrows();
+            window.addEventListener('resize', drawAllArrows);
+        });
+    </script>
+</body>
+</html>
+
